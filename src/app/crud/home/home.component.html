@@ -1,0 +1,30 @@
+<div>
+    <h1>Customer Details</h1>
+    <button type="button" [routerLink]="/crud/create/">Create new Customer</button>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Age</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Email</th>                            
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let customer of customers">
+                <td>{{customer.id}}</td>
+                <td>{{customer.age}}</td>
+                <td>{{customer.name}}</td>
+                <td>{{customer.address}}</td>
+                <td>{{customer.email}}</td>
+                <td>{{customer.phone}}</td>
+                <td>
+                    <button type="button" [routerLink]="['/crud/update/', customer.id]">Update</button>
+                    <button type="button" (click)="crudService.delete(customer.id)">Remove</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

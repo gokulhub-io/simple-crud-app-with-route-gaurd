@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "sample-crud-app-with-route-guard"
+    }
+  },
+  "defaultProject": "sample-crud-app-with-route-guard",
+  "cli": {
+    "analytics": "df7fc4c2-d2e0-4801-8c94-a631b36d9675"
+  }
 }
